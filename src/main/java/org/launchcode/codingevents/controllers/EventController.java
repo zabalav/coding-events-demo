@@ -21,11 +21,12 @@ public class EventController {
 
     @GetMapping
     public String displayAllEvents(Model model) {
-        List<String> events = new ArrayList<>();
-        events.add("RAGBRAI");
-        events.add("RITME");
-        events.add("AFCT Ride TC Treats");
-        model.addAttribute("title", "All Events");
+//        List<String> events = new ArrayList<>();
+//        events.add("RAGBRAI");
+//        events.add("RITME");
+//        events.add("AFCT Ride TC Treats");
+//        model.addAttribute("title", "All Events");
+//        model.addAttribute("events", events);
         model.addAttribute("events", events);
         return "events/index";
     }
