@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 /**
- * Created by CB
+ * Created by VZ
  */
 @Controller
 @RequestMapping("events")

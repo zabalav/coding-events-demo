@@ -17,18 +17,24 @@ public class Event {
     @Size(max=500, message="*Description too long.")
     private String description;
 
+    @NotBlank(message="*Location is required.")
+    @Size(min=7, max=70, message="*Location must be between 10 and 70 characters.")
+    private String location;
+
     @NotBlank (message="*Email required.")
     @Email (message="*Invalid email. Try again.")
     private String contactEmail;
 
     private EventType type;
 
-    public Event(String name, String description, String contactEmail, EventType type) {
+    public Event(String name, String description, String location, String contactEmail, EventType type) {
         this();
         this.name = name;
         this.description = description;
+        this.location = location;
         this.contactEmail = contactEmail;
         this.type = type;
+
     }
 
     public Event() {
@@ -50,6 +56,14 @@ public class Event {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public String getContactEmail() {
